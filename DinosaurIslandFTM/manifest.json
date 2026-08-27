@@ -1,0 +1,13 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "Dinosaur Island [FTM]",
+    "Author": "Dinosaur Island Team",
+    "Version": "0.1.0",
+    "Description": "Farm Type Manager for Dinosaur Island",
+    "UniqueID": "DinosaurIsland.FTM",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Esca.FarmTypeManager",
+        "MinimumVersion": "1.23.0"
+    }
+}

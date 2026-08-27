@@ -1,0 +1,12 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "Dinosaur Island [CP]",
+    "Author": "Dinosaur Island Team",
+    "Version": "0.1.0",
+    "Description": "Content for Dinosaur Island",
+    "UniqueID": "DinosaurIsland.CP",
+    "UpdateKeys": [],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

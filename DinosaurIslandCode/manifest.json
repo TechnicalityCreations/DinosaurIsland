@@ -1,0 +1,10 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "Dinosaur Island",
+    "Author": "Dinosaur Island Team",
+    "Version": "0.1.0",
+    "Description": "Adds the new late-game area, Dinosaur Island",
+    "UniqueID": "DinosaurIsland.SMAPI",
+    "UpdateKeys": [],
+    "EntryDll": "DinosaurIslandCode.dll"
+}
