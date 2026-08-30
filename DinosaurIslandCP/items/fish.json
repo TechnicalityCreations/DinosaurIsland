@@ -1,0 +1,93 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "{{ModId}}_BluespottedRibbontailRay": {
+                    "Name": "{{ModId}}_BluespottedRibbontailRay",
+                    "Displayname": "Blue Spotted Ribbontail Ray",
+                    "Description": "An iridescent spotted ray, often found near coral reefs.",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 220,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 0,
+                    "ContextTags": ["color_dark_orange"]
+                },
+                "{{ModId}}_LavaSalmon": {
+                    "Name": "{{ModId}}_LavaSalmon",
+                    "Displayname": "Lava Salmon",
+                    "Description": "It feeds off of minerals found in pools of lava.",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 6000,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 1,
+                    "ContextTags": ["fish_legendary", "color_red"]
+                },
+                "{{ModId}}_QueenAngelfish": {
+                    "Name": "{{ModId}}_QueenAngelfish",
+                    "Displayname": "Queen Angelfish",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 60,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 2,
+                    "ContextTags": ["color_yellow"]
+                },
+                "{{ModId}}_Schoolmaster": {
+                    "Name": "{{ModId}}_Schoolmaster",
+                    "Displayname": "Schoolmaster",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 100,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 3,
+                    "ContextTags": ["color_gray"]
+                },
+                "{{ModId}}_Skelefish": {
+                    "Name": "{{ModId}}_Skelefish",
+                    "Displayname": "Skelefish",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 120,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 4,
+                    "ContextTags": ["color_white"]
+                },
+                "{{ModId}}_StripedPufferfish": {
+                    "Name": "{{ModId}}_StripedPufferfish",
+                    "Displayname": "Striped Pufferfish",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 400,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 5,
+                    "ContextTags": ["color_poppyseed"]
+                },
+                "{{ModId}}_Trumpetfish": {
+                    "Name": "{{ModId}}_Trumpetfish",
+                    "Displayname": "Trumpetfish",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Fish",
+                    "Category": -4,
+                    "Price": 180,
+                    "Texture": "Mods/{{ModId}}/Fish/FishItems",
+                    "SpriteIndex": 6,
+                    "ContextTags": ["color_yellow"]
+                }
+            }
+                
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Fish/FishItems",
+            "FromFile": "assets/sprites/items/objects_fish.png"
+        }
+    ]
+}

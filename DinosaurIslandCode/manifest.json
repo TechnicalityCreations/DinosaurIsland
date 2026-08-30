@@ -6,5 +6,15 @@
     "Description": "Adds the new late-game area, Dinosaur Island",
     "UniqueID": "DinosaurIsland.SMAPI",
     "UpdateKeys": [],
-    "EntryDll": "DinosaurIslandCode.dll"
+    "EntryDll": "DinosaurIslandCode.dll",
+    "Dependencies": [
+        {
+            "IsRequired": true,
+            "UniqueID": "DinosaurIsland.FTM"
+        },
+        {
+            "IsRequired": true,
+            "UniqueID": "DinosaurIsland.CP"
+        }
+    ]
 }
