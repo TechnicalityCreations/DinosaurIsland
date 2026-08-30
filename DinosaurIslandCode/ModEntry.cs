@@ -1,8 +1,10 @@
-﻿using StardewModdingAPI;
+﻿using StardewValley;
+using StardewModdingAPI;
+using StardewModdingAPI.Events;
 
 namespace DinosaurIslandCode
 {
-	public class ModEntry : Mod
+	internal sealed class ModEntry : Mod
 	{
 		public override void Entry(IModHelper helper)
 		{
