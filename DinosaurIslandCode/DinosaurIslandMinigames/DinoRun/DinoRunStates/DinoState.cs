@@ -2,14 +2,14 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewModdingAPI;
 
-namespace DinosaurIslandMinigames
+namespace DinosaurIslandMinigames.DinoRun
 {
-    public abstract class State
+    public abstract class DinoState
     {
         protected DinoRunGame _game;
         protected IModHelper _helper;
 
-        public State(IModHelper helper, DinoRunGame dinoRun)
+        public DinoState(IModHelper helper, DinoRunGame dinoRun)
         {
             _helper = helper;
             _game = dinoRun;

@@ -2,13 +2,13 @@ using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
 using StardewModdingAPI;
 
-namespace DinosaurIslandMinigames
+namespace DinosaurIslandMinigames.DinoRun
 {
-    public class MenuState : State
+    public class DinoMainMenu : DinoState
     {
         private GameState? _newGame;
         
-        public MenuState(IModHelper helper, DinoRunGame dinoRun) : base(helper, dinoRun)
+        public DinoMainMenu(IModHelper helper, DinoRunGame dinoRun) : base(helper, dinoRun)
         {
             
         }

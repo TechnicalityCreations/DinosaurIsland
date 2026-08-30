@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using StardewValley;
 using StardewValley.Minigames;
 
-namespace DinosaurIslandMinigames
+namespace DinosaurIslandMinigames.DinoRun
 {
     public class DinoRunGame : IMinigame
     {
