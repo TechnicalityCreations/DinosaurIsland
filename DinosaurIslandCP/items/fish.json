@@ -95,6 +95,46 @@
             "Entries":{
                 "{{ModId}}_LavaSalmon": "{{ModID}}_LavaSalmon/115/mixed/130/130/600 2600/spring summer fall winter/both/684 .1/3/.1/10/false"
             }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FishPondData",
+            "Entries": [
+                {
+                    "Id": "{{ModId}}_LavaSalmon",
+                    "RequiredTags": ["item_{{ModId}}_LavaSalmon"],
+                    "Precedence": 0,
+                    "WaterColor": [
+                        {
+                            "Id": "Default",
+                            "Color": "250 30 30",
+                            "MinPopulation": 1,
+                            "MinUnlockedPopulationGate": 2,
+                            "Condition": null
+                        }
+                    ],
+                    "MaxPopulation": 1,
+                    "ProducedItems": [
+                        {
+                            "RequiredPopulation": 0,
+                            "Chance": 0.37,
+                            "Precedence": 0,
+                            "Id": "LavaSalmon",
+                            "ItemId": "(O)812",
+                            "RandomItemId": "(O)812"
+                        }
+                    ],
+                    "PopulationGates": null,
+                    "CustomFields": null
+                }
+            ]
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/AquariumFish",
+            "Entries": {
+                
+            }
         }
     ]
 }
