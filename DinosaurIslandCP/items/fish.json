@@ -137,6 +137,26 @@
             "Action": "Load",
             "Target": "Mods/{{ModId}}/AquariumFish",
             "FromFile": "assets/sprites/AquariumFish.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "TargetField": ["Caldera", "Fish"],
+            "Entries": {
+                "{{ModId}}_LavaSalmon": {
+                    "MinFishingLevel": 10,
+                    "MinDistanceFromShore": 5,
+                    "CatchLimit": 1,
+                    "CanUseTrainingRod": false,
+                    "IsBossFish": true,
+                    "Precedence": -100,
+                    "IgnoreFishDataRequirements": true,
+                    "CanBeInherited": false,
+                    "UseFishCaughtSeededRandom": false,
+                    "Id": "{{ModId}}_LavaSalmon",
+                    "ItemId": "{{ModId}}_LavaSalmon"
+                }
+            }
         }
     ]
 }
