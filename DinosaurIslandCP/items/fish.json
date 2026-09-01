@@ -24,7 +24,7 @@
                     "Price": 6000,
                     "Texture": "Mods/{{ModId}}/Fish/FishItems",
                     "SpriteIndex": 1,
-                    "ContextTags": ["fish_legendary", "color_red"]
+                    "ContextTags": ["fish_legendary", "color_red", "fish_has_roe", "season_all"]
                 },
                 "{{ModId}}_QueenAngelfish": {
                     "Name": "{{ModId}}_QueenAngelfish",
@@ -99,18 +99,15 @@
         {
             "Action": "EditData",
             "Target": "Data/FishPondData",
-            "Entries": [
-                {
+            "Entries": {
+                "{{ModId}}_LavaSalmon": {
                     "Id": "{{ModId}}_LavaSalmon",
                     "RequiredTags": ["item_{{ModId}}_LavaSalmon"],
                     "Precedence": 0,
                     "WaterColor": [
                         {
                             "Id": "Default",
-                            "Color": "250 30 30",
-                            "MinPopulation": 1,
-                            "MinUnlockedPopulationGate": 2,
-                            "Condition": null
+                            "Color": "250 30 30"
                         }
                     ],
                     "MaxPopulation": 1,
@@ -121,20 +118,25 @@
                             "Precedence": 0,
                             "Id": "LavaSalmon",
                             "ItemId": "(O)812",
-                            "RandomItemId": "(O)812"
+                            "RandomItemId": null
                         }
                     ],
                     "PopulationGates": null,
                     "CustomFields": null
                 }
-            ]
+            }
         },
         {
             "Action": "EditData",
             "Target": "Data/AquariumFish",
             "Entries": {
-                
+                "{{ModId}}_LavaSalmon": "0/fish/////Mods\\{{ModId}}\\AquariumFish"
             }
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/AquariumFish",
+            "FromFile": "assets/sprites/AquariumFish.png"
         }
     ]
 }
