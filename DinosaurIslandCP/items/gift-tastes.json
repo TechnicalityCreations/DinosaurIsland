@@ -1,26 +1,28 @@
 {
-    "Changes": {
-        "Action": "EditData",
-        "Target": "Data/NPCGiftTastes",
-        "TextOperations": [
-            {
-                "Operation": "Append",
-                "Target": ["Entries", "Universal_Like"],
-                "Value": "{{ModId}}_LavaSalmon",
-                "Delimiter": " "
-            },
-            {
-                "Operation": "Append",
-                "Target": ["Entries", "Lewis", 7],
-                "Value": "{{ModId}}_LavaSalmon",
-                "Delimiter": " "
-            },
-            {
-                "Operation": "Append",
-                "Target": ["Entries", "Willy", 1],
-                "Value": "{{ModId}}_LavaSalmon",
-                "Delimiter": " "
-            }
-        ]
-    }
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Like"],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Lewis", 7],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Willy", 1],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                }
+            ]
+        }
+    ]
 }
