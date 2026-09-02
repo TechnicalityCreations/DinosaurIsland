@@ -1,0 +1,290 @@
+{
+    "Changes": [
+        // this part says where to get the assets to create the 'texture' that gets called for later.
+        {
+            "LogName": "Load Object Tilesheets",
+            "Action": "Load",
+            "Target": "Mods/{{ModId}}/Food, Mods/{{ModId}}/Objects, Mods/{{ModId}}/Crops",
+            "FromFile": "assets/sprites/{{TargetWithoutPath}}.png"
+        },
+        // crop data is assigned to the seeds 
+        {
+            "LogName": "Cara Dino Island Crops",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "{{ModId}}_FernSeeds": {
+                    "Seasons": [
+                        "spring",
+                        "summer",
+                        "fall",
+                        "winter"
+                    ],
+                    "DaysInPhase": [
+                        1,
+                        1,
+                        2,
+                        2,
+                        1
+                    ], // first two seed sprites are shown for one day each, stage one gets 2 days, stage two gets two days, and then the next stage gets one before it is fully grown
+                    "RegrowDays": 2, // if the fern is a re-harvestable plant - how many days before it is ready again
+                    "HarvestMinStack": 1,
+                    "HarvestMaxStack": 1,
+                    "HarvestMaxIncreasePerFarmingLevel": 0.2,
+                    "ExtraHarvestChance": 0.05,
+                    "HarvestItemId": "{{ModId}}_FernLeaf",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 0
+                },
+                "{{ModId}}_WaterChestnutSeeds": {
+                    "Seasons": [
+                        "Spring", "summer", "fall", "winter"
+                    ],
+                    "DaysInPhase": [
+                        1,
+                        2,
+                        2,
+                        3
+                    ],
+                    "RegrowDays": -1, // no regrowing for you
+                    "IsPaddyCrop": true, // this is what says it is a water crop!
+                    "HarvestMinStack": 1,
+                    "HarvestMaxStack": 1,
+                    "HarvestMaxIncreasePerFarmingLevel": 0.2,
+                    "ExtraHarvestChance": 0.05,
+                    "HarvestItemId": "{{ModId}}_WaterChestnut",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 1
+                }
+            }
+            },
+            //this adds object data for the seed packet, the mushrooms, and the fern item you harvest from the fern plant
+            {
+                "LogName": "Add Cara Dino Island Objects",
+                "Action": "EditData",
+                "Target": "Data/Objects",
+                "Entries": {
+                    "{{ModId}}_FernSeeds": {
+                        "Name": "{{ModId}}_FernSeeds", //internal id stuff
+                        "Displayname": "Fern Seeds", //player facing
+                        "Description": "Plant to grow Ferns", //player facing description
+                        "Edibility": -300, //negative means cannot eat
+                        "Type": "Seeds", //speficic category 
+                        "Category": "-74",
+                        "Price": 180, // money you get for it
+                        "IsDrink": false, //can you drink it?
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 2
+                    },
+                    "{{ModId}}_WaterChestnutSeeds": {
+                        "Name": "{{ModId}}_WaterChestnutSeeds", //internal id stuff
+                        "Displayname": "Water Chestnut Seeds", //player facing
+                        "Description": "Plant to grow Water Chestnuts", //player facing description
+                        "Edibility": -300, //negative means cannot eat
+                        "Type": "Seeds", //speficic category 
+                        "Category": "-74",
+                        "Price": 180, // money you get for it
+                        "IsDrink": false, //can you drink it?
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 5
+                    },
+
+                    "{{ModId}}_BabyBelloShroom": {
+                        "Name": "{{ModId}}_BabyBelloShroom",
+                        "Displayname": "Baby Bello Shroom",
+                        "Description": "Baby Portobello Mushroom",
+                        "Edibility": 80,
+                        "Type": "Cooking",
+                        "Category": -24,
+                        "Price": 80,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 0
+                    },
+                    "{{ModId}}_DinoShroom": {
+                        "Name": "{{ModId}}_DinoShroom",
+                        "Displayname": "Dino Shroom",
+                        "Description": "I am dino here me roar!",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": -24,
+                        "Price": 80,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 1
+                    },
+                    "{{ModId}}_FernLeaf": {
+                        "Name": "{{ModId}}_FernLeaf",
+                        "Displayname": "Fern Leaf",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": "-24",
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 3
+                    },
+                    "{{ModId}}_WaterChestnut": {
+                        "Name": "{{ModId}}_WaterChestnut",
+                        "Displayname": "Water Chestnut",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": "-24",
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Objects",
+                        "SpriteIndex": 4
+                    }
+                }
+            },
+            //adds the cooked dishes as items (this could be added to the above entry but I find it helpful to have them separate)
+            {
+                "LogName": "Add Food",
+                "Action": "EditData",
+                "Target": "Data/Objects",
+                "Entries": {
+                    "{{ModId}}_FernSalad": {
+                        "Name": "{{ModId}}_FernSalad",
+                        "DisplayName": "Fern Salad",
+                        "Description": "Bare bones, but yummy!",
+                        "Edibility": "69",
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 220,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 0
+                    },
+                    "{{ModId}}_StuffedDinoShroom": {
+                        "Name": "{{ModId}}_StuffedDinoShroom",
+                        "Displayname": "Stuffed Dino Shroom",
+                        "Description": "Shroom cap stuffed with breaded filling",
+                        "Edibility": 200,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 280,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 1
+                    },
+                    "{{ModId}}_GrilledDinoShroom": {
+                        "Name": "{{ModId}}_GrilledDinoShroom",
+                        "Displayname": "Grilled Dino Shroom",
+                        "Description": "Just add fire!",
+                        "Edibility": 160,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 180,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 2
+                    },
+                    "{{ModId}}_CreamyFernSoup": {
+                        "Name": "{{ModId}}_CreamyFernSoup",
+                        "Displayname": "Creamy Fern Soup",
+                        "Description": "A creamy soup made from Ferns and Water Chestnuts!",
+                        "Edibility": 200,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 300,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 3
+                    },
+                    "{{ModId}}_FernScambledEggs": {
+                        "Name": "{{ModId}}_FernScambledEggs",
+                        "Displayname": "Fern Scrambled Eggs",
+                        "Description": "Scrambled eggs with Ferns!",
+                        "Edibility": 200,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 300,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 4
+                    },
+                    "{{ModId}}_CleanedWaterChestnut": {
+                        "Name": "{{ModId}}_CleanedWaterChestnut",
+                        "Displayname": "Cleaned Water Chestnut",
+                        "Description": "A cleaned Water Chestnut, ready to cook with!",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 5
+                    },
+                    "{{ModId}}_WaterChestnutSlices": {
+                        "Name": "{{ModId}}_WaterChestnutSlices",
+                        "Displayname": "Water Chestnut Slices",
+                        "Description": "Sliced Water Chestnuts, good raw or in a dish!",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 6
+                    },
+                    "{{ModId}}_ToastedWaterChestnut": {
+                        "Name": "{{ModId}}_ToastedWaterChestnut",
+                        "Displayname": "Toasted Water Chestnut",
+                        "Description": "A toasted Water Chestnut, crunchy and delicious!",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 7
+                    },
+                    "{{ModId}}_FriedWaterChestnut": {
+                        "Name": "{{ModId}}_FriedWaterChestnut",
+                        "Displayname": "Fried Water Chestnut",
+                        "Description": "A fried Water Chestnut, crispy and tasty!",
+                        "Edibility": 100,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 120,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 8
+                    },
+                    "{{ModId}}_AncientVeggieSkewers": {
+                        "Name": "{{ModId}}_AncientVeggieSkewers",
+                        "Displayname": "Ancient Veggie Skewers",
+                        "Description": "Dino shrooms and Water Chestnuts on a stick!",
+                        "Edibility": 200,
+                        "Type": "Cooking",
+                        "Category": -7,
+                        "Price": 300,
+                        "IsDrink": false,
+                        "Texture": "Mods\\{{ModId}}\\Food",
+                        "SpriteIndex": 9
+                    }
+
+                }
+            },
+            {
+                "LogName": "Cara Dino Island Cooking Recipes",
+                "Action": "EditData",
+                "Target": "Data/CookingRecipes",
+                "Entries": {
+
+                    // item id, then the item id for ingredients + quantity. then the 1 1 part is unused data but something needs to be there for it to parse so I just use 1 1. Then the name of the dish, then any unlock conditions. 
+                    "{{ModId}}_FernSalad": " {{ModId}}_FernLeaf 2 {{ModId}}_DinoShroom 1/1 1/{{ModId}}_FernSalad/default",
+                    "{{ModId}}_StuffedDinoShroom": " (O)247 1 {{ModId}}_DinoShroom 1 {{ModId}}_CleanedWaterChestnut 1/1 1/{{ModId}}_StuffedDinoShroom/default",
+                    "{{ModId}}_GrilledDinoShroom": " (O)382 1 {{ModId}}_DinoShroom 1/1 1/{{ModId}}_GrilledDinoShroom/default",
+                    "{{ModId}}_AncientVeggieSkewers": " (O)388 1 {{ModId}}_DinoShroom 1 {{ModId}}_SlicedWaterChestnut 1/1 1/{{ModId}}_AncientVeggieSkewers/default",
+                    "{{ModId}}_CreamyFernSoup": " (O)245 1 (O)184 1 {{ModId}}_FernLeaf 1 {{ModId}}_ToastedWaterChestnut 1/1 1/{{ModId}}_CreamyFernSoup/default",
+                    "{{ModId}}_CleanedWaterChestnut": " {{ModId}}_WaterChestnut 1/1 1/{{ModId}}_CleanedWaterChestnut/default",
+                    "{{ModId}}_WaterChestnutSlices": " {{ModId}}_CleanedWaterChestnut 2/1 1/{{ModId}}_WaterChestnutSlices/default",
+                    "{{ModId}}_ToastedWaterChestnut": "(O)382 1 {{ModId}}_WaterChestnutSlices 1/1 1/{{ModId}}_ToastedWaterChestnut/default",
+                    "{{ModId}}_FriedWaterChestnut": "(O)247 1 (O)216 1 {{ModId}}_WaterChestnutSlices 1/1 1/{{ModId}}_FriedWaterChestnut/default",
+                    "{{ModId}}_FernScambledEggs": "(O)180 1 {{ModId}}_FernLeaf 1/1 1/{{ModId}}_FernScambledEggs/default"
+                }
+            }
+        ]
+        }
+        
