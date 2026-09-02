@@ -24,7 +24,8 @@
                     "Price": 6000,
                     "Texture": "Mods/{{ModId}}/Fish/FishItems",
                     "SpriteIndex": 1,
-                    "ContextTags": ["fish_legendary", "color_red", "fish_has_roe", "season_all"]
+                    "ContextTags": ["fish_legendary", "color_red", "fish_has_roe", "season_all"],
+                    "Edibility": 20
                 },
                 "{{ModId}}_QueenAngelfish": {
                     "Name": "{{ModId}}_QueenAngelfish",
@@ -93,7 +94,7 @@
             "Action":"EditData",
             "Target": "Data/Fish",
             "Entries":{
-                "{{ModId}}_LavaSalmon": "{{ModID}}_LavaSalmon/115/mixed/130/130/600 2600/spring summer fall winter/both/684 .1/3/.1/10/false"
+                "{{ModId}}_LavaSalmon": "{{ModID}}_LavaSalmon/135/mixed/130/130/600 2600/spring summer fall winter/both/684 .1/3/.1/10/false"
             }
         },
         {
