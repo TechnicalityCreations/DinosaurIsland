@@ -24,8 +24,11 @@
                     "Price": 6000,
                     "Texture": "Mods/{{ModId}}/Fish/FishItems",
                     "SpriteIndex": 1,
-                    "ContextTags": ["fish_legendary", "color_red", "fish_has_roe", "season_all"],
-                    "Edibility": 20
+                    "Edibility": 20,
+                    "IsDrink": false,
+                    "Buffs": null,
+                    "ExcludeFromRandomSale": true,
+                    "ContextTags": ["fish_legendary", "color_red", "fish_has_roe", "season_all"]
                 },
                 "{{ModId}}_QueenAngelfish": {
                     "Name": "{{ModId}}_QueenAngelfish",
