@@ -1,0 +1,21 @@
+{
+    "Changes": [
+        {
+            "Action": "Load",
+            "FromFile": "assets/maps/DinoIsland_S.tmx",
+            "Target": "Maps/{{ModID}}_DinoIslandS"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+                "{{ModID}}_DinoIslandS": {
+                    "DisplayName": "Dinosaur Island South",
+                    "CreateOnLoad": {
+                        "MapPath": "Maps/{{ModID}}_DinoIslandS"
+                    }
+                }
+            }
+        }
+    ]
+}

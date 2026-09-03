@@ -1,0 +1,8 @@
+{
+    "Changes": [
+        {
+            "Action": "Include",
+            "FromFile": "locations/DinoIslandSouth.json"
+        }
+    ]
+}

@@ -9,7 +9,7 @@
         },
         // crop data is assigned to the seeds 
         {
-            "LogName": "Cara Dino Island Crops",
+            "LogName": "Dino Island Crops",
             "Action": "EditData",
             "Target": "Data/Crops",
             "Entries": {
@@ -35,12 +35,40 @@
                     "HarvestItemId": "{{ModId}}_FernLeaf",
                     "Texture": "Mods/{{ModId}}/Crops",
                     "SpriteIndex": 0
+                },
+                "{{ModId}}_SolarFlowerSeeds": {
+                    "Seasons": [
+                        "summer"
+                    ],
+                    "DaysInPhase": [
+                        1,
+                        1,
+                        12,
+                        7
+                    ],
+                    "HarvestItemId": "{{ModId}}_SolarFlower",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 1
+                },
+                "{{ModId}}_LunarFlowerSeeds": {
+                    "Seasons": [
+                        "winter"
+                    ],
+                    "DaysInPhase": [
+                        1,
+                        1,
+                        12,
+                        7
+                    ],
+                    "HarvestItemId": "{{ModId}}_LunarFlower",
+                    "Texture": "Mods/{{ModId}}/Crops",
+                    "SpriteIndex": 2
                 }
             }
         },
         //this adds object data for the seed packet, the mushrooms, and the fern item you harvest from the fern plant
         {
-            "LogName": "Add Cara Dino Island Objects",
+            "LogName": "Add Crop Objects",
             "Action": "EditData",
             "Target": "Data/Objects",
             "Entries": {
@@ -50,11 +78,65 @@
                     "Description": "Plant to grow Ferns", //player facing description
                     "Edibility": -300, //negative means cannot eat
                     "Type": "Seeds", //speficic category 
-                    "Category": "-74",
+                    "Category": -74,
                     "Price": 180, // money you get for it
                     "IsDrink": false, //can you drink it?
                     "Texture": "Mods\\{{ModId}}\\Objects",
                     "SpriteIndex": 2
+                },
+                "{{ModId}}_SolarFlowerSeeds": {
+                    "Name": "{{ModId}}_SolarFlowerSeeds",
+                    "DisplayName": "Solarbloom Seeds",
+                    "Description": "Plant these in the summer. Takes 21 days to mature. Can grow special honey when combined with moonflowers.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 500,
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "SpriteIndex": 6,
+                    "ContextTags": [
+                        "season_summer"
+                    ]
+                },
+                "{{ModId}}_LunarFlowerSeeds": {
+                    "Name": "{{ModId}}_LunarFlowerSeeds",
+                    "DisplayName": "Moonflower Seeds",
+                    "Description": "Plant these in the winter. Takes 21 days to mature. Can grow special honey when combined with solarblooms.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 500,
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "SpriteIndex": 7,
+                    "ContextTags": [
+                        "season_winter"
+                    ]
+                },
+                "{{ModId}}_SolarFlower": {
+                    "Name": "{{ModId}}_SolarFlower",
+                    "DisplayName": "Solarbloom",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Basic",
+                    "Category": -80,
+                    "Price": 6000,
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "SpriteIndex": 4,
+                    "ContextTags": [
+                        "flower_item",
+                        "color_orange"
+                    ]
+                },
+                "{{ModId}}_LunarFlower": {
+                    "Name": "{{ModId}}_LunarFlower",
+                    "DisplayName": "Moonflower",
+                    "Description": "PLACEHOLDER DESCRIPTION",
+                    "Type": "Basic",
+                    "Category": -80,
+                    "Price": 6000,
+                    "Texture": "Mods\\{{ModId}}\\Objects",
+                    "SpriteIndex": 5,
+                    "ContextTags": [
+                        "flower_item",
+                        "color_white"
+                    ]
                 },
                 "{{ModId}}_BabyBelloShroom": {
                     "Name": "{{ModId}}_BabyBelloShroom",
@@ -79,18 +161,18 @@
                     "IsDrink": false,
                     "Texture": "Mods\\{{ModId}}\\Objects",
                     "SpriteIndex": 1
-            },
-            "{{ModId}}_FernLeaf": {
-                "Name": "{{ModId}}_FernLeaf",
-                "Displayname": "Fern Leaf",
-                "Edibility": 100,
-                "Type": "Cooking",
-                "Category": "-24",
-                "Price": 120,
-                "IsDrink": false,
-                "Texture":"Mods\\{{ModId}}\\Objects",
-                "SpriteIndex": 3
-            }
+                },
+                "{{ModId}}_FernLeaf": {
+                    "Name": "{{ModId}}_FernLeaf",
+                    "Displayname": "Fern Leaf",
+                    "Edibility": 100,
+                    "Type": "Cooking",
+                    "Category": "-24",
+                    "Price": 120,
+                    "IsDrink": false,
+                    "Texture":"Mods\\{{ModId}}\\Objects",
+                    "SpriteIndex": 3
+                }
         }
         },
         //adds the cooked dishes as items (this could be added to the above entry but I find it helpful to have them separate)

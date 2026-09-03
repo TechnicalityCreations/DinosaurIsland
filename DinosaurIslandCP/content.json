@@ -13,6 +13,10 @@
         {
             "Action": "Include",
             "FromFile": "items/crops.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "locations/DinoIslandSouth.json"
         }
     ]
 }
