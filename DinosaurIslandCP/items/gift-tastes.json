@@ -1,0 +1,28 @@
+{
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "Universal_Like"],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Lewis", 7],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                },
+                {
+                    "Operation": "Append",
+                    "Target": ["Fields", "Leo", 1],
+                    "Value": "{{ModId}}_LavaSalmon",
+                    "Delimiter": " "
+                }
+            ]
+        }
+    ]
+}
