@@ -9,6 +9,10 @@
         {
             "Action": "Include",
             "FromFile": "items/gift-tastes.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "items/crops.json"
         }
     ]
 }
