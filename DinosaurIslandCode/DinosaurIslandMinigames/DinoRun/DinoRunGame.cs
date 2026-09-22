@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using StardewModdingAPI;
 using StardewValley;
 using StardewValley.Minigames;
 
@@ -8,9 +9,19 @@ namespace DinosaurIslandMinigames.DinoRun
 {
     public class DinoRunGame : IMinigame
     {
-        public DinoRunGame()
+        private DinoState _currentState;
+        private DinoState? _nextState;
+        private IModHelper _helper;
+        
+        public DinoRunGame(IModHelper helper)
         {
-            
+            _helper = helper;
+            _currentState = new DinoMainMenu(_helper, this);
+        }
+
+        public void changeState(DinoState state)
+        {
+            _nextState = state;
         }
 
         public void changeScreenSize()
@@ -100,12 +111,19 @@ namespace DinosaurIslandMinigames.DinoRun
 
         public void Update(float time)
         {
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+                _nextState = null;
+            }
+
+            _currentState.Update(time);
             
         }
 
         public void draw(SpriteBatch spriteBatch)
         {
-            
+            _currentState.Draw(spriteBatch);
         }
     }
 }

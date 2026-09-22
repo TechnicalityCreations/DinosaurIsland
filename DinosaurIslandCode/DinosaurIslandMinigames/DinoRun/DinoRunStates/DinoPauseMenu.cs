@@ -6,7 +6,7 @@ namespace DinosaurIslandMinigames.DinoRun
 {
     public class DinoPauseMenu : DinoState
     {
-        private GameState? _newGame;
+        private DinoGame? _newGame;
         
         public DinoPauseMenu(IModHelper helper, DinoRunGame dinoRun) : base(helper, dinoRun)
         {
@@ -18,7 +18,7 @@ namespace DinosaurIslandMinigames.DinoRun
             throw new NotImplementedException();
         }
 
-        public override void Draw(float gameTime, SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             throw new NotImplementedException();
         }

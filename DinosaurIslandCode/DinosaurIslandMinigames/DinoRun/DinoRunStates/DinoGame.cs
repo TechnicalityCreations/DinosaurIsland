@@ -6,9 +6,11 @@ namespace DinosaurIslandMinigames.DinoRun
 {
     public class DinoGame : DinoState
     {
-        public DinoGame(IModHelper helper, DinoRunGame dinoRun) : base(helper, dinoRun)
+        private GameBackground background;
+        
+        public DinoGame(IModHelper helper, DinoRunGame dinoRun, DinoLevel dinoLevel) : base(helper, dinoRun)
         {
-            
+            background = new GameBackground(dinoLevel);
         }
 
         public override void Update(float gameTime)
@@ -16,7 +18,7 @@ namespace DinosaurIslandMinigames.DinoRun
             throw new NotImplementedException();
         }
 
-        public override void Draw(float gameTime, SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             throw new NotImplementedException();
         }

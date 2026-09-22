@@ -1,12 +1,15 @@
 using Microsoft.Xna.Framework.Graphics;
 using StardewValley;
+using StardewValley.Menus;
 using StardewModdingAPI;
+using System.Numerics;
+using System.Drawing;
 
 namespace DinosaurIslandMinigames.DinoRun
 {
     public class DinoMainMenu : DinoState
     {
-        private GameState? _newGame;
+        private DinoGame? _newGame;
         
         public DinoMainMenu(IModHelper helper, DinoRunGame dinoRun) : base(helper, dinoRun)
         {
@@ -18,7 +21,7 @@ namespace DinosaurIslandMinigames.DinoRun
             throw new NotImplementedException();
         }
 
-        public override void Draw(float gameTime, SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             throw new NotImplementedException();
         }

@@ -15,7 +15,7 @@ namespace DinosaurIslandMinigames.DinoRun
             _game = dinoRun;
         }
 
-        public abstract void Draw(float gameTime, SpriteBatch spriteBatch);
+        public abstract void Draw(SpriteBatch spriteBatch);
 
         public abstract void Update(float gameTime);
     }
