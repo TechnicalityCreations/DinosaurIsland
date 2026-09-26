@@ -1,0 +1,33 @@
+{
+	
+	//Furniture
+
+	"DinosaurIsland_seaweed_Name": "Seaweed Decor",
+	"DinosaurIsland_picture_frame_mermaid_Name": "Framed Mermaid Picture",
+	"DinosaurIsland_fish_net_wall_Name": "Fish Net Decor",
+	"DinosaurIsland_mermaid_tea_table_Name": "Mermaid Tea Table",
+	"DinosaurIsland_octopus_night_light_Name": "Octopus Night Light",
+	"DinosaurIsland_kelp_Name": "Kelp Decor",
+	"DinosaurIsland_mermaid_stool_pink_Name": "Pink Mermaid Stool",
+	"DinosaurIsland_mermaid_stool_pearl_blue_Name": "Blue Mermaid Stool",
+	"DinosaurIsland_fish_wall_art_Name": "Fish Art",
+	"DinosaurIsland_pearl_vanity_v2_Name": "Pearl Vanity",
+	"DinosaurIsland_pearl_vanity_Name": "Pearl Vanity",
+
+	//Objects
+
+	"DinosaurIsland_FreezeDriedFruit_Name": "Freeze-Dried Fruit",
+	"DinosaurIsland_FreezeDriedFruit_Description": "Fruit that has had all of the moisture removed. A sweet treat that is highly sought after.",
+	"DinosaurIsland_FreezeDriedVegetables_Name": "Freeze-Dried Vegetables",
+	"DinosaurIsland_FreezeDriedVegetables_Description": "Vegetables that have had all of the moisture removed. Excellent for preservation and tasty too!",
+
+	//Machines
+
+	"DinosaurIsland_SpiceMaker_Name": "Spice Maker",
+	"DinosaurIsland_SpiceMaker_Description": "A machine that somehow produces Qi Seasoning every day",
+	"DinosaurIsland_FreezeDrier_Name": "Freeze Drier",
+	"DinosaurIsland_FreezeDrier_Description": "A machine powered by frozen tears that removes all of the moisture from large quantities of fruits and vegetables",
+	"DinosaurIsland_FreezeDried_Name": "Freeze-Dried",
+	"DinosaurIsland_FreezeDrierWrongIngredient": "The Freeze Drier requires 10 of the same fruit or vegetable",
+	"DinosaurIsland_FreezeDrierFuel": "The Freeze Drier requires Frozen Tears for fuel"
+}

@@ -1,0 +1,88 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/seaweed",
+      "FromFile": "assets/furniture/mermaid/seaweed.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/picture_frame_mermaid",
+      "FromFile": "assets/furniture/mermaid/picture_frame_mermaid.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/fish_net_wall",
+      "FromFile": "assets/furniture/mermaid/fish_net_wall.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/mermaid_tea_table",
+      "FromFile": "assets/furniture/mermaid/mermaid_tea_table.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/octopus_night_light",
+      "FromFile": "assets/furniture/mermaid/octopus_night_light.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/mermaid_stool",
+      "FromFile": "assets/furniture/mermaid/mermaid_stool.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/kelp",
+      "FromFile": "assets/furniture/mermaid/kelp.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/mermaid_stool_pink",
+      "FromFile": "assets/furniture/mermaid/mermaid_stool_pink.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/mermaid_stool_pearl_blue",
+      "FromFile": "assets/furniture/mermaid/mermaid_stool_pearl_blue.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/mermaid_coffee_table",
+      "FromFile": "assets/furniture/mermaid/mermaid_coffee_table.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/fish_wall_art",
+      "FromFile": "assets/furniture/mermaid/fish_wall_art.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/pearl_vanity_v2",
+      "FromFile": "assets/furniture/mermaid/pearl_vanity_v2.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "Mods/{{ModId}}/pearl_vanity",
+      "FromFile": "assets/furniture/mermaid/pearl_vanity.png"
+    },
+    {
+      "LogName": "Dinosaur Island Mermaid Furniture Data",
+      "Action": "EditData",
+      "Target": "Data/Furniture",
+      "Entries": {
+        "{{ModId}}_seaweed": "{{ModId}}_seaweed/painting/1 3/1 3/1/811/2/{{i18n:DinosaurIsland_seaweed_Name}}/0/Mods\\{{ModId}}\\seaweed/true/",
+        "{{ModId}}_picture_frame_mermaid": "{{ModId}}_picture_frame_mermaid/painting/2 2/2 2/1/811/2/{{i18n:DinosaurIsland_picture_frame_mermaid_Name}}/0/Mods\\{{ModId}}\\picture_frame_mermaid/true/",
+        "{{ModId}}_fish_net_wall": "{{ModId}}_fish_net_wall/painting/2 2/2 2/1/811/2/{{i18n:DinosaurIsland_fish_net_wall_Name}}/0/Mods\\{{ModId}}\\fish_net_wall/true/",
+        "{{ModId}}_mermaid_tea_table": "{{ModId}}_mermaid_tea_table/table/2 2/2 2/1/811/2/{{i18n:DinosaurIsland_mermaid_tea_table_Name}}/0/Mods\\{{ModId}}\\mermaid_tea_table/true/",
+        "{{ModId}}_octopus_night_light": "{{ModId}}_octopus_night_light/lamp/1 2/1 1/1/811/2/{{i18n:DinosaurIsland_octopus_night_light_Name}}/0/Mods\\{{ModId}}\\octopus_night_light/true/",
+        "{{ModId}}_mermaid_stool": "{{ModId}}_mermaid_stool/chair/1 1/1 1/1/811/2/{{i18n:DinosaurIsland_mermaid_stool_Name}}/0/Mods\\{{ModId}}\\mermaid_stool/true/",
+        "{{ModId}}_kelp": "{{ModId}}_kelp/decor/1 2/1 1/1/811/2/{{i18n:DinosaurIsland_kelp_Name}}/0/Mods\\{{ModId}}\\kelp/true/",
+        "{{ModId}}_mermaid_stool_pink": "{{ModId}}_mermaid_stool_pink/chair/1 1/1 1/1/811/2/{{i18n:DinosaurIsland_mermaid_stool_pink_Name}}/0/Mods\\{{ModId}}\\mermaid_stool_pink/true/",
+        "{{ModId}}_mermaid_stool_pearl_blue": "{{ModId}}_mermaid_stool_pearl_blue/chair/1 1/1 1/1/811/2/{{i18n:DinosaurIsland_mermaid_stool_pearl_blue_Name}}/0/Mods\\{{ModId}}\\mermaid_stool_pearl_blue/true/",
+        "{{ModId}}_fish_wall_art": "{{ModId}}_fish_wall_art/painting/3 2/3 2/1/811/2/{{i18n:DinosaurIsland_fish_wall_art_Name}}/0/Mods\\{{ModId}}\\fish_wall_art/true/",
+        "{{ModId}}_pearl_vanity_v2": "{{ModId}}_pearl_vanity_v2/dresser/3 3/3 1/1/811/2/{{i18n:DinosaurIsland_pearl_vanity_v2_Name}}/0/Mods\\{{ModId}}\\pearl_vanity_v2/true/",
+        "{{ModId}}_pearl_vanity": "{{ModId}}_pearl_vanity/dresser/3 3/3 1/1/811/2/{{i18n:DinosaurIsland_pearl_vanity_Name}}/0/Mods\\{{ModId}}\\pearl_vanity/true/"
+      }
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "Changes": [
+        {
+            "Action": "Load",
+            "Target": "{{ModId}}/FreezeDrierTextures",
+            "FromFile": "assets/sprites/machines/freezedrier.png"
+        },
+	{	
+	    "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries":	{
+			  "{{ModId}}_FreezeDrier": {
+				"Name": "{{ModId}}_FreezeDrier",
+				"DisplayName": "{{i18n:DinosaurIsland_FreezeDrier_Name}}",
+				"Description": "{{i18n:DinosaurIsland_FreezeDrier_Description}}",
+				"Fragility": 0,
+				"CanBePlacedOutdoors": true,
+				"CanBePlacedIndoors": true,
+				"IsLamp": false,
+				"Texture": "{{ModId}}/FreezeDrierTextures",
+				"SpriteIndex": 0,
+				"CustomFields": null
+			  }
+              }
+	},
+	{
+    	  "Action": "EditData",
+    	  "Target": "Data/Machines",
+    	  "Entries":   {
+        		"(BC){{ModId}}_FreezeDrier": {
+            			"OutputRules": [
+				{
+                    			"Id": "{{ModId}}_FreezeDriedFruit",
+                    			"Triggers": [
+                        		{
+                            			"Trigger": "ItemPlacedInMachine",
+                            			"RequiredTags": ["category_fruits"],
+                            			"RequiredCount": 10
+                        		}
+                   				],
+                    		"OutputItem": [
+                       			{
+                            		"Id": "{{ModId}}_FreezeDriedFruit",
+                            		"ItemId": "{{ModId}}_FreezeDriedFruit",
+                            		"CopyQuality":false,
+					"CopyPrice": true,
+					"CopyColor": true, 
+					"PreserveId": "DROP_IN",
+		      			"ObjectInternalName": "{0} FreezeDriedFruit",
+		      			"ObjectDisplayName": "{{i18n:DinosaurIsland_FreezeDried_Name}} %PRESERVED_DISPLAY_NAME",
+					"PriceModifiers":[
+						{
+						"Modification": "Add",
+						"Amount": 30
+						},
+						{
+						"Modification": "Multiply",
+						"Amount": 11
+						},
+						{
+						"Modification": "Add",
+						"Amount": 100
+						},
+					]
+                        		}
+                   		],
+                    		"MinutesUntilReady": 2000
+                		},
+				{
+                    			"Id": "{{ModId}}_FreezeDriedVegetables",
+                    			"Triggers": [
+                        		{
+                            			"Trigger": "ItemPlacedInMachine",
+                            			"RequiredTags": ["category_vegetable"],
+                            			"RequiredCount": 10
+                        		}
+                   				],
+                    		"OutputItem": [
+                       			{
+                            		"Id": "{{ModId}}_FreezeDriedVegetables",
+                            		"ItemId": "{{ModId}}_FreezeDriedVegetables",
+                            		"CopyQuality":false,
+					"CopyPrice": true,
+					"CopyColor": true, 
+					"PreserveId": "DROP_IN",
+		      			"ObjectInternalName": "{0} FreezeDriedVegetables",
+		      			"ObjectDisplayName": "{{i18n:DinosaurIsland_FreezeDried_Name}} %PRESERVED_DISPLAY_NAME",
+					"PriceModifiers":[
+						{
+						"Modification": "Add",
+						"Amount": 50
+						},
+						{
+						"Modification": "Multiply",
+						"Amount": 12
+						},
+					]
+                        		}
+                   		],
+                    		"MinutesUntilReady": 2000
+                		},
+                             
+            			],
+            			"AdditionalConsumedItems":[
+                			{
+                    			"ItemId":"84",
+                    			"RequiredCount":1,
+                    			"InvalidCountMessage":"{{i18n:DinosaurIsland_FreezeDrierFuel}}"
+                			}
+           			],
+            			"InvalidItemMessage":"{{i18n:DinosaurIsland_FreezeDrierWrongIngredient}}",
+            			"ShowNextIndexWhileWorking":false,
+            			"ShowNextIndexWhenReady":false,
+            			"WobbleWhileWorking":true
+        		}
+	}
+    }
+  ]
+}

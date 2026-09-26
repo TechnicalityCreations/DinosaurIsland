@@ -1,0 +1,51 @@
+{
+	"Changes": [
+        	{
+            		"Action": "Load",
+            		"Target": "Mods/{{ModId}}/Items/FreezeDriedItems",
+            		"FromFile": "assets/sprites/items/objects_freezedried.png"
+        	},
+		//Items data
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_FreezeDriedFruit": {
+					"Name": "{{ModId}}_FreezeDriedFruit",
+					"DisplayName": "{{i18n: DinosaurIsland_FreezeDriedFruit_Name}}",
+					"Description": "{{i18n: DinosaurIsland_FreezeDriedFruit_Description}}",
+					"Type": "Basic",
+					"ColorOverlayFromNextIndex": true,
+					"Category": -26,
+					"Price": 400,
+					"Texture": "Mods/{{ModId}}/Items/FreezeDriedItems",
+                    			"SpriteIndex": 0,
+					"ExcludeFromShippingCollection": true,
+					"ContextTags": [
+						"color_red"
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Objects",
+			"Entries": {
+				"{{ModId}}_FreezeDriedVegetables": {
+					"Name": "{{ModId}}_FreezeDriedVegetables",
+					"DisplayName": "{{i18n: DinosaurIsland_FreezeDriedVegetables_Name}}",
+					"Description": "{{i18n: DinosaurIsland_FreezeDriedVegetables_Description}}",
+					"Type": "Basic",
+					"ColorOverlayFromNextIndex": true,
+					"Category": -26,
+					"Price": 150,
+					"Texture": "Mods/{{ModId}}/Items/FreezeDriedItems",
+                    			"SpriteIndex": 2,
+					"ContextTags": [
+						"color_green"
+					]
+				}
+			}
+		}
+	]
+}

@@ -12,6 +12,22 @@
         },
         {
             "Action": "Include",
+            "FromFile": "items/furnituremermaid.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "items/freezedrieditems.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "machines/freezedrier.json"
+        },
+        {
+            "Action": "Include",
+            "FromFile": "machines/spicemaker.json"
+        },
+        {
+            "Action": "Include",
             "FromFile": "items/crops.json"
         }
     ]

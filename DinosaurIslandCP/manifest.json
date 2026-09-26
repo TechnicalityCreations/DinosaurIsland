@@ -8,5 +8,11 @@
     "UpdateKeys": [],
     "ContentPackFor": {
         "UniqueID": "Pathoschild.ContentPatcher"
-    }
+    },
+    "Dependencies": [
+   {
+      "UniqueID": "selph.ExtraMachineConfig",
+      "MinimumVersion": "1.6.0"
+   }
+]
 }
