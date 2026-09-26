@@ -1,0 +1,52 @@
+{
+  "Changes": [
+        {
+            "Action": "Load",
+            "Target": "{{ModId}}/SpiceMakerTextures",
+            "FromFile": "assets/sprites/machines/spicemaker.png"
+        },
+	{	
+	    "Action": "EditData",
+            "Target": "Data/BigCraftables",
+            "Entries":	{
+			  "{{ModId}}_SpiceMaker": {
+				"Name": "{{ModId}}_SpiceMaker",
+				"DisplayName": "{{i18n:DinosaurIsland_SpiceMaker_Name}}",
+				"Description": "{{i18n:DinosaurIsland_SpiceMaker_Description}}",
+				"Fragility": 0,
+				"CanBePlacedOutdoors": true,
+				"CanBePlacedIndoors": true,
+				"IsLamp": false,
+				"Texture": "{{ModId}}/SpiceMakerTextures",
+				"SpriteIndex": 0,
+				"CustomFields": null
+			  }
+              }
+	},
+	{
+    	  "Action": "EditData",
+    	  "Target": "Data/Machines",
+    	  "Entries":   {
+        		"(BC){{ModId}}_SpiceMaker": {
+            			"OutputRules": [
+				{
+                    			"Id": "{{ModId}}_QiSeasoningProduction",
+                    			"Triggers": [
+                        		{
+                            			"Trigger": "DayUpdate"
+					}
+                   				],
+                    		"OutputItem": [
+                       			{
+                            		"Id": "{{ModId}}_QiSeasoningProduction",
+                            		"ItemId": "917",
+					"MinStack": 2
+                        		}
+                   		]
+                		}     
+            		],
+        	}
+	}
+    }
+  ]
+}
